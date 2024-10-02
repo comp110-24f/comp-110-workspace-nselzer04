@@ -44,14 +44,18 @@ def contains_char(word: str, letter: str) -> None:
         print(letter + " found at index 4")
         count = count + 1
     if count == 0:
-        print("No instances of " + letter + "found in " + word)
+        print("No instances of " + letter + " found in " + word)
+    elif count == 1:
+        print("1 instance of " + letter + " found in " + word)
     else:
         print(str(count) + " instances of " + letter + " found in " + word)
 
 
 def main() -> None:
     """This function puts it all together, calling each function."""
-    contains_char(word=input_word(), letter=input_letter())
+    word = input_word()
+    letter = input_letter()
+    contains_char(word, letter)
     # I at first had an error with calling contains_char before I got to part 6 (putting everything together) because for the parameters, I just
     # used word and letter, without adding the equals input_word and equals input_letter, so essentially not telling the function where to get
     # the word and letter.
