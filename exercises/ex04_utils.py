@@ -5,8 +5,10 @@ __author__ = "730770540"
 
 def all(the_list: list[int], the_int: int) -> bool:
     """This function will return "True" if a given int is the only int found in the given list, and "False" if not."""
+    if len(the_list) == 0:
+        return False
     for elem in the_list:
-        # I had trouble with this, because I kept writing for idx in the_list, and then trying to index, the_list[idx], and getting an error. I looked back at the slides in order to figure this out.
+        # I had trouble with this, because I kept writing "for idx in the_list", and then trying to index, the_list[idx], and getting an error. I looked back at the slides in order to figure this out.
         if elem != the_int:
             return False
     return True
