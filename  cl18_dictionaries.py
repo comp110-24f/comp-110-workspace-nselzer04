@@ -6,11 +6,15 @@ ice_cream: dict[str, int] = {
     "strawberry": 4,
 }
 
+for key in ice_cream:
+    print(ice_cream[key])
+
 print(len(ice_cream))  # prints 3
 # len evaluates to the numb of entries
 
 ice_cream["mint"] = 3
 # add key-value entry by directly assigning to a key
+
 
 print(ice_cream["chocolate"])  # prints 12
 # access entries by their key
